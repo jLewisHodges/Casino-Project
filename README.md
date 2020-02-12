@@ -4,9 +4,9 @@ This is a early release of the Casino Project. In this release, accounts are sto
 Meaning that there is no file output everything is temporary and will be deleted when program is exited.
 
 Functionality:
-User Accounts and admin accounts are present
-Two games are included: Black Jack and Slots
-Can deposit and cash out funds
+User Accounts and admin accounts are present.
+Two games are included: Black Jack and Slots.
+Can deposit and cash out funds.
 
 Because this is an early release there may be some bugs. If you do find any bugs you can report them here on github under 
 this repository. Feel free to contribute to this project if you would like.
