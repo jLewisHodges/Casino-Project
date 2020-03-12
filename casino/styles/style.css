@@ -1,0 +1,28 @@
+.container{
+	display: flex;
+}
+.container.nav a:hover{
+	font-size: 20px;
+}
+.container.nav{
+	font-size: 18px;
+	background-color: black;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-seri;
+    justify-content: space-evenly;
+    width: 100%;
+    border-bottom: 6px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(black, white);
+}
+
+.container.nav #link{
+    vertical-align: text-bottom;
+    line-height: 100px;
+}
+
+.container.nav a, a:visited, a:active{
+	color:white;
+}
+body{
+	background-color:white;
+}
