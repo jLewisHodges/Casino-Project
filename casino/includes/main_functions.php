@@ -8,7 +8,7 @@
                 $nav = '<div class="'.$class.'">
                     <div>
                         <a href="index.php">
-                        <img src = "images/logo.png" height = "100" width = "100"></a>
+                        <img src = "images/logo.png" height = "100" width = "150"></a>
                     </div>
                     ';
 
