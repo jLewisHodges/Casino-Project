@@ -1,4 +1,5 @@
-<?php include('functions.php'); ?>
+<?php include('functions.php'); 
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +16,8 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src = "<?php echo get_javascript($script); ?>"></script>
 		
 		<link rel="stylesheet" href="styles/style.css" />
 		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>

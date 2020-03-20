@@ -23,4 +23,11 @@
         return $title;
     }
 
+    function get_javascript($script)
+    {
+        $javascript = 'scripts/'.$script;
+
+        return $javascript;
+    }
+
 ?>
