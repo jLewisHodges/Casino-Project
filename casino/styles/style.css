@@ -1,0 +1,63 @@
+.container{
+	display: flex;
+}
+.container.nav a:hover{
+	font-size: 20px;
+}
+.container.nav{
+	font-size: 18px;
+	background-color: white;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-seri;
+    justify-content: space-evenly;
+	width: 100%;
+	border-bottom-width: 10px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-image: linear-gradient(to bottom, rgb(184, 184, 184) 0%, rgb(202, 202, 202) 12%, rgb(224, 223, 223) 47%, rgb(255, 255, 255) 100%);
+	position: relative;
+}
+
+.container{
+	background-color: white;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-seri;
+    justify-content: space-evenly;
+	width: 100%;
+}
+
+.container.player{
+	height: 400px;
+	width: 100%;
+	align-items: center;
+}
+
+.container.dealer{
+	height: 400px;
+	width: 100%;
+	align-items: center;
+}
+
+.container.nav #link{
+    vertical-align: text-bottom;
+    line-height: 100px;
+}
+
+.container.controls{
+	padding-bottom: 150px;
+}
+
+.container.controls .button{
+	color: white;
+	background-color: black;
+	border-style: solid;
+	size: 100px;
+	font-size: 30px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-radius: 8px;
+}
+
+.container.nav a, a:visited, a:active{
+	color: black;
+}
+body{
+	background-color:white;
+}
