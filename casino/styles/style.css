@@ -1,10 +1,10 @@
 .container{
 	display: flex;
 }
-.container.nav a:hover{
+.nav a:hover{
 	font-size: 20px;
 }
-.container.nav{
+.nav{
 	font-size: 18px;
 	background-color: white;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-seri;
@@ -24,40 +24,190 @@
 	width: 100%;
 }
 
-.container.player{
-	height: 400px;
+#table{
 	width: 100%;
-	align-items: center;
+	height: auto;
+	border-radius: 40px;
 }
 
-.container.dealer{
-	height: 400px;
-	width: 100%;
-	align-items: center;
+.field{
+	position: relative;
 }
 
-.container.nav #link{
+.field img{
+	width: 100%;
+	height: auto;
+}
+
+.dealerCards{
+	position: absolute;
+	top: 30%;
+	left: 42%;
+	-ms-transform: translatey(-50%);
+	transform: translatey(-50%);
+	z-index: 0;
+}
+
+.playerCards{
+	position: absolute;
+	top: 70%;
+	left: 42%;
+	-ms-transform: translatey(-50%);
+	transform: translatey(-50%);
+	z-index: 0;
+}
+
+.results{
+	margin: 0;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+.field img{
+	height: auto;
+	width: 27%;
+}
+
+.card2{
+	position: absolute;
+	top: 0px;
+	left: 6%;
+}
+
+.card3{
+	position: absolute;
+	top: 0px;
+	left: 12%;
+}
+
+.card4{
+	position: absolute;
+	top: 0px;
+	left: 18%;
+}
+
+.card5{
+	position: absolute;
+	top: 0px;
+	left: 24%;
+}
+
+.card6{
+	position: absolute;
+	top: 0px;
+	left: 30%;
+}
+
+.card7{
+	position: absolute;
+	top: 0px;
+	left: 36%;
+}
+
+.button{
+	color: white;
+	background-color: black;
+	border-style: solid;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-radius: 8px;
+	font-size: 1.5;
+	width: 100px;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+#stand{
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#draw{
+	position: absolute;
+	top: 50%;
+	right: 30%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#deal{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#link{
     vertical-align: text-bottom;
     line-height: 100px;
 }
 
-.container.controls{
-	padding-bottom: 150px;
+.controls{
+	padding-bottom: 50px;
 }
 
-.container.controls .button{
-	color: white;
-	background-color: black;
-	border-style: solid;
-	size: 100px;
-	font-size: 30px;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	border-radius: 8px;
-}
-
-.container.nav a, a:visited, a:active{
+.nav a, a:visited, a:active{
 	color: black;
 }
 body{
 	background-color:white;
+}
+
+@media (max-width: 400px) {
+	#table{
+		width: auto;
+		height: 100%;
+		border-radius: 40px;
+	}
+
+	#stand{
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	
+	#draw{
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 70%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	
+	#deal{
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	.field img{
+		height: auto;
+		width: 40%;
+	}
+
+	.results{
+		margin: 0;
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		font-size: 80%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		color: white;
+	}
 }

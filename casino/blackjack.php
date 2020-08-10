@@ -18,21 +18,22 @@ if(isset($button))
 {
     switch($button)
     {
+        case 'deal':
+            $game = new BlackJackGame();
+            $game->newGame();
+            $endGame = FALSE;
+            $_SESSION['newGame'] = serialize($game);
+            break;
         case 'draw':
             $game = unserialize($_SESSION['newGame']);
             $game->hit();
+            $endGame = FALSE;
             $_SESSION['newGame'] = serialize($game);
             break;
         case 'stand':
-            $game = new BlackJackGame();
-            $game->newGame();
-            $_SESSION['newGame'] = serialize($game);
+            $endGame = TRUE;
+            goto end;
             break;
-        case 'surrender':
-            $game = new BlackJackGame();
-            $game->newGame();
-            $_SESSION['newGame'] = serialize($game);
-            break; 
         case 'default':
             break;
     }
@@ -52,10 +53,31 @@ if(isset($button))
         if(!empty($game))
             $game->showPlayerHand(); ?>
     </div>
-    <form method="post" class="controls" action="">
-        <button class="button" name = "button" type="submit" value="draw" id="draw">Draw</button>
-        <button class="button" name = "button" type="submit" value="stand" id="stand">Stand</button>
-        <button class="button" name = "button" type="submit" value="stand" id="surrender">Surrender</button>
+    <div class="dealerCards" id = "dealerCards">
+        <?php 
+        if(!empty($game))
+            $game->showHiddenDealerHand();
+        ?>
+    </div>
+        <form method="post" class="controls" action="">
+            <?php 
+                if(empty($game))
+                {
+                    echo '<button class="button" name = "button" type="submit" value="deal" id="deal">Deal</button>';
+                }
+                else
+                {
+                    echo '<button class="button" name = "button" type="submit" value="draw" id="draw">Draw</button>
+                    <button class="button" name = "button" type="submit" value="stand" id="stand">Stand</button>';
+                }
+                if(!empty($prevGame))
+                {
+
+                    $results = $prevGame->getResults();
+                    echo $results;
+                    $prevGame = NULL;
+                }
+            ?>
     </form>
 </div>
 </div>
